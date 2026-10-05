@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+<title>it started with a SCREAM</title>
+<meta name="description" content="A preliminary presentation. Actors, directors, writers, and special effects makeup artists whose careers began with a horror credit."/>
+<meta name="theme-color" content="#07060a"/>
+<link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+<style>
+@font-face{font-family:Jakarta;src:url("fonts/plus-jakarta-sans.woff2") format("woff2");font-weight:400 700;font-style:normal;font-display:swap}
+@font-face{font-family:Jakarta;src:url("fonts/plus-jakarta-sans-italic.woff2") format("woff2");font-weight:400 700;font-style:italic;font-display:swap}
+@font-face{font-family:Cormorant;src:url("fonts/cormorant-garamond.woff2") format("woff2");font-weight:500 700;font-style:normal;font-display:swap}
+@font-face{font-family:Cormorant;src:url("fonts/cormorant-garamond-italic.woff2") format("woff2");font-weight:500 700;font-style:italic;font-display:swap}
+@font-face{font-family:Nosifer;src:url("fonts/nosifer.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+:root{
+  --bg:#07060a;--fg:#f3ead8;--muted:#b7ad9c;--line:#f4ead72e;--accent:#c4232c;--panel:#100e12e6;
+  --prose:65ch;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--fg);font-family:Jakarta,system-ui,sans-serif}
+body{min-height:100vh;background:
+  radial-gradient(1200px 700px at 70% -10%, #2a1216 0%, transparent 55%),
+  radial-gradient(900px 500px at 0% 100%, #141018 0%, transparent 50%),
+  var(--bg)}
+img{max-width:100%;display:block}
+a{color:inherit}
+button,input,textarea{font:inherit;color:inherit}
+.grain{pointer-events:none;position:fixed;inset:0;z-index:40;opacity:.18;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='.55'/></svg>");
+}
+.wrap{width:min(1080px, calc(100% - 2rem));margin:0 auto}
+header{position:sticky;top:0;z-index:20;backdrop-filter:blur(10px);background:#07060acc;border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.75rem 0}
+.brand{text-decoration:none;letter-spacing:.04em;font-size:.78rem;text-transform:uppercase}
+.brand b{font-family:Nosifer,cursive;font-weight:400;color:var(--accent);letter-spacing:.02em;font-size:1.05em}
+nav{display:flex;flex-wrap:wrap;gap:.35rem .8rem;justify-content:flex-end}
+nav a{text-decoration:none;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+nav a[aria-current="true"],nav a:hover{color:var(--fg)}
+.hero{padding:4.5rem 0 3rem}
+.hero h1{margin:0 0 1.1rem;font-family:Cormorant,serif;font-weight:600;font-size:clamp(2.4rem,6vw,4.6rem);line-height:.95;letter-spacing:-.02em}
+.scream{font-family:Nosifer,cursive;font-weight:400;color:var(--accent);font-size:.72em;letter-spacing:.03em;display:inline-block;margin-left:.08em;text-shadow:0 0 18px #a0141c88}
+.lede{max-width:42rem;font-size:1.12rem;line-height:1.65;margin:0}
+.section{padding:1rem 0 3.4rem}
+.kicker{margin:0;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:#d7c7a2}
+h2.page{margin:.35rem 0 0;font-family:Cormorant,serif;font-size:clamp(2rem,4vw,3.3rem);font-weight:600;line-height:1;text-align:left;text-wrap:wrap;max-width:var(--prose);word-spacing:normal;hyphens:manual}
+.rule{width:4rem;height:1px;background:var(--line);margin:1.1rem 0 1.15rem}
+.prose{max-width:var(--prose)}
+.prose p,.cmp p.body,.card p.body{text-align:justify;text-align-last:left;hyphens:auto;line-height:1.65;margin:.8rem 0}
+.muted{color:var(--muted)}
+.gallery{position:relative;border:1px solid var(--line);min-height:520px;padding:1.2rem;overflow:hidden;
+  background:
+    linear-gradient(#07060a88,#07060acc),
+    url("plates/set-wood.jpg") center/cover}
+.gallery:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 40%, transparent 0 40%, #00000088 100%);pointer-events:none}
+.wall{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.frame{background:transparent;border:0;padding:0;cursor:pointer;text-align:left;color:inherit}
+.mat{background:#1a1612;border:10px solid #cbb892;box-shadow:0 16px 30px #000a, inset 0 0 0 1px #0006;padding:.45rem}
+.mat img{width:100%;height:240px;object-fit:cover;object-position:center 18%;background:#111}
+.frame small{display:block;margin-top:.45rem;letter-spacing:.08em;text-transform:uppercase;font-size:.68rem;color:#f3ead8}
+.stars{display:grid;gap:.8rem}
+.star{display:grid;grid-template-columns:108px 1fr;gap:1rem;border-top:1px solid var(--line);padding:.9rem 0;background:transparent;color:inherit;text-align:left;cursor:pointer;width:100%}
+.star img{width:108px;height:148px;object-fit:cover;object-position:center 20%;border:1px solid var(--line)}
+.star h3{margin:.15rem 0;font-size:1.35rem;font-family:Cormorant,serif}
+.idx{font-variant-numeric:tabular-nums;letter-spacing:.12em;font-size:.72rem;color:#d7c7a2}
+.cmp{border-top:1px solid var(--line);padding:1rem 0 1.1rem}
+.cmp-head{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.4rem 1.2rem;align-items:baseline;max-width:var(--prose)}
+.cmp h3{margin:0;font-family:Cormorant,serif;font-size:1.7rem;font-weight:600;text-align:left;text-align-last:left;word-spacing:normal;hyphens:manual;letter-spacing:0;max-width:var(--prose)}
+.meta{margin:0;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);text-align:left;word-spacing:normal;hyphens:manual}
+aside.note{border-left:2px solid var(--line);padding-left:1rem;max-width:var(--prose)}
+.people{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.person,.addr{border:1px solid var(--line);padding:1rem;background:#09080788}
+label{display:block;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:.7rem 0 .3rem}
+input,textarea{width:100%;background:#0c0b0f;border:1px solid var(--line);padding:.7rem .8rem}
+textarea{min-height:8rem;resize:vertical}
+.btn{margin-top:1rem;background:transparent;border:1px solid var(--accent);padding:.7rem 1rem;letter-spacing:.12em;text-transform:uppercase;cursor:pointer}
+.btn:hover{background:#c4232c22}
+footer{border-top:1px solid var(--line);padding:1.2rem 0 2rem;color:var(--muted);font-size:.8rem;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+dialog{border:1px solid var(--accent);background:#090807f2;color:var(--fg);width:min(32rem, calc(100% - 1.5rem));padding:1.1rem 1.15rem 1.2rem;box-shadow:0 24px 60px #000c}
+dialog::backdrop{background:#07060ad0}
+.shot{width:min(100%, 18rem);max-height:min(58vh, 30rem);height:auto;object-fit:contain;object-position:center center;margin:.4rem auto .8rem;background:#07060a;border:1px solid var(--line)}
+dialog h3{margin:.2rem 0;font-family:Cormorant,serif;font-size:2rem;text-align:left;word-spacing:normal}
+dialog p{text-align:justify;text-align-last:left}
+.close{float:right;background:transparent;border:1px solid var(--line);padding:.25rem .55rem;cursor:pointer}
+@media(max-width:720px){
+  .wall{grid-template-columns:1fr 1fr}
+  .people{grid-template-columns:1fr}
+  .star{grid-template-columns:84px 1fr}
+  .star img{width:84px;height:116px}
+  nav{display:none}
+  .mobile-nav{display:flex}
+}
+.mobile-nav{display:none;gap:.6rem;flex-wrap:wrap;padding:0 0 .7rem}
+</style>
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+<header>
+  <div class="wrap">
+    <div class="bar">
+      <a class="brand" href="#overview">it started with a <b>SCREAM</b></a>
+      <nav>
+        <a href="#overview">01 Overview</a>
+        <a href="#need">02 Need</a>
+        <a href="#stars">03 Stars</a>
+        <a href="#form">04 Form</a>
+        <a href="#comparison">05 Comparison</a>
+        <a href="#contact">06 Contact</a>
+      </nav>
+    </div>
+    <div class="mobile-nav wrap">
+      <a href="#stars">Stars</a><a href="#comparison">Comparison</a><a href="#contact">Contact</a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero" id="overview">
+    <h1>it started with a <span class="scream">SCREAM</span></h1>
+    <p class="lede">Actors, directors, writers, special effects makeup artists whose careers began with a horror credit, in sit-down interviews, with archive of the films and of the work that followed. Not a hosted tour of the genre.</p>
+  </section>
+
+  <section class="section" id="gallery">
+    <p class="kicker">Gallery wall</p>
+    <h2 class="page">The room</h2>
+    <div class="rule"></div>
+    <p class="prose">Portraits hang the way they would in a working lodge: full plate, not a crop of the hairline. Open any frame. The same dossier opens from the list below.</p>
+    <div class="gallery" id="wall"></div>
+  </section>
+
+  <section class="section" id="need">
+    <p class="kicker">02 — Need</p>
+    <h2 class="page">Need</h2>
+    <div class="rule"></div>
+    <div class="prose">
+      <p>Horror’s run in theaters, on home video, and in merchandising has not been matched.</p>
+      <p>No genre has matched horror’s run across theatrical exhibition, home video, and merchandising. Boutique labels in both video and apparel have pulled landmark films, and titles once left in obscurity, back into circulation. Those works have found new audiences without losing the people who were there first.</p>
+      <p>Interest in the stories behind these films and series has not let up. The people in a position to tell them are the ones who made the work, and who went on to build distinguished careers of their own.</p>
+    </div>
+  </section>
+
+  <section class="section" id="stars">
+    <p class="kicker">03 — Stars</p>
+    <h2 class="page">Stars</h2>
+    <div class="rule"></div>
+    <p class="prose">Nine careers that began with a horror credit — before the awards, the franchises, and the household names.</p>
+    <div class="stars" id="star-list"></div>
+  </section>
+
+  <section class="section" id="form">
+    <p class="kicker">04 — Form</p>
+    <h2 class="page">Form</h2>
+    <div class="rule"></div>
+    <div class="prose">
+      <p>The subject is what the talent says. The rest of the picture supports that conversation.</p>
+      <p>This is not built as a host’s tour of the genre, and it is not built on reenactment. The picture is carried by sit-down interviews and by archival material: the films that started these careers, and the careers that followed, in the words of the people who lived both.</p>
+      <p><strong>01 Sit-down interviews.</strong> What the talent discusses is the scene. The interview is the record, not a bridge to another format.</p>
+      <p><strong>02 Archive in support.</strong> Archival material carries memory, context, and the work itself. It does not replace the person speaking.</p>
+      <p><strong>03 The horror credit is the start.</strong> The horror credit is where the story starts. It is not asked to be the whole career, or the whole film.</p>
+    </div>
+  </section>
+
+  <section class="section" id="comparison">
+    <p class="kicker">05 — Comparison</p>
+    <h2 class="page">Comparison</h2>
+    <div class="rule"></div>
+    <p class="prose">The audience for serious horror nonfiction is already on the record. These series, on AMC and on Shudder, are the comparison set in the preliminary packet.</p>
+    <aside class="note">
+      <p class="kicker">Distinction</p>
+      <p class="body">Those series showed that viewers will watch for the history, the craft, and the people behind the films. it started with a SCREAM asks a narrower question: not only how the films were made, but what the stars remember of the credit that started the career.</p>
+    </aside>
+    <div id="cmp"></div>
+  </section>
+
+  <section class="section" id="contact">
+    <p class="kicker">06 — Contact</p>
+    <h2 class="page">Contact</h2>
+    <div class="rule"></div>
+    <div class="people">
+      <article class="person"><h3>Malek Akkad</h3><p class="muted">Chief Executive Officer</p><p><a href="mailto:Malek@trancasfilms.com">Malek@trancasfilms.com</a></p></article>
+      <article class="person"><h3>Ryan Freimann</h3><p class="muted">Vice President of Business Affairs</p><p><a href="mailto:Ryan@trancasfilms.com">Ryan@trancasfilms.com</a></p></article>
+    </div>
+    <article class="addr" style="margin-top:1rem">
+      <p>Trancas International Films, Inc.<br>2021 Pontius Avenue<br>Los Angeles, California 90025</p>
+      <p><a href="tel:+13104776569">310-477-6569</a></p>
+      <p class="muted">Trancas International · Further Front · Compass International Pictures</p>
+    </article>
+    <form id="note-form" style="max-width:42rem;margin-top:1.4rem">
+      <label for="from">From</label>
+      <input id="from" name="from" required placeholder="Name"/>
+      <label for="msg">Note</label>
+      <textarea id="msg" name="msg" required placeholder="What you want on the record"></textarea>
+      <button class="btn" type="submit">Hold this note</button>
+      <p id="sent" class="muted" hidden>Held on this machine only. Nothing was sent.</p>
+    </form>
+  </section>
+</main>
+<footer>
+  <div class="wrap" style="display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;width:100%">
+    <span>it started with a SCREAM</span>
+    <span>© 2023 · WGA No. 2310392</span>
+  </div>
+</footer>
+
+<dialog id="dossier">
+  <button class="close" type="button" id="close">Close</button>
+  <p class="kicker" id="d-kicker">Star</p>
+  <h3 id="d-name"></h3>
+  <p class="meta" id="d-origin"></p>
+  <img class="shot" id="d-img" alt=""/>
+  <p id="d-body"></p>
+</dialog>
+
+<script>
+const stars = [
+  {name:"Jamie Lee Curtis", origin:"Halloween (1978)", image:"portraits/jamie-lee-curtis.jpg", body:"Before True Lies, Freaky Friday, and her Academy Award for Everything Everywhere All at Once, Jamie Lee Curtis made her feature debut as Laurie Strode in John Carpenter’s Halloween."},
+  {name:"John Travolta", origin:"Carrie (1976)", image:"portraits/john-travolta.jpg", body:"Before Saturday Night Fever, Grease, and Pulp Fiction, John Travolta made one of his first feature appearances as Billy Nolan in Brian De Palma’s Carrie."},
+  {name:"Brooke Shields", origin:"Alice, Sweet Alice (1976)", image:"portraits/brooke-shields.jpg", body:"Before The Blue Lagoon and Endless Love, Brooke Shields appeared in Alfred Sole’s cult horror film Alice, Sweet Alice, also released as Communion."},
+  {name:"Matthew McConaughey", origin:"Texas Chainsaw Massacre: The Next Generation (1994)", image:"portraits/matthew-mcconaughey.jpg", body:"Before Interstellar, and his Academy Award winning role portraying Ron Woodroof in Dallas Buyers Club, Matthew McConaughey starred in Texas Chainsaw Massacre: The Next Generation."},
+  {name:"Paul Rudd", origin:"Halloween: The Curse of Michael Myers (1995)", image:"portraits/paul-rudd.jpg", body:"Before I Love You, Man, Ant-Man, and Sausage Party, Paul Rudd played Tommy Doyle in Halloween: The Curse of Michael Myers."},
+  {name:"Renée Zellweger", origin:"Texas Chainsaw Massacre: The Next Generation (1994)", image:"portraits/renee-zellweger.jpg", body:"Before Jerry Maguire, Bridget Jones’s Diary, an Academy Award nomination for Chicago, Cold Mountain, and her Academy Award for Judy, Renée Zellweger starred alongside Matthew McConaughey in Texas Chainsaw Massacre: The Next Generation."},
+  {name:"Elizabeth Olsen", origin:"Silent House (2011)", image:"portraits/elizabeth-olsen.jpg", body:"Before she played Wanda Maximoff, Elizabeth Olsen starred in the thriller Silent House."},
+  {name:"Demi Moore", origin:"Parasite (1982)", image:"portraits/demi-moore.jpg", body:"Before Ghost, Indecent Proposal, and G.I. Jane, Demi Moore starred in Parasite — Charles Band’s 1982 science-fiction horror film, not the later, unrelated feature of the same name."},
+  {name:"Jason Alexander", origin:"The Burning (1981)", image:"portraits/jason-alexander.jpg", body:"Before he became a household name as George Costanza on Seinfeld, Jason Alexander appeared in the cult slasher The Burning."}
+];
+const comps = [
+  {title:"Eli Roth’s History of Horror", meta:"AMC · Three seasons · 2018–2021", blurb:"A hosted survey of the genre’s cycles, subgenres, and the filmmakers who made them."},
+  {title:"Cursed Films", meta:"Shudder · Two seasons · 2020–2022", blurb:"Production histories of films shadowed by accident, tragedy, and the stories that outlived the set."},
+  {title:"Horror Noire: A History of Black Horror", meta:"Shudder · 2019", blurb:"A documentary history of Black horror, told by the artists who shaped it."},
+  {title:"The Core", meta:"Shudder · Series · 2017", blurb:"Mickey Keating’s Shudder series on how fear is built — technique, psychology, and the people in the room. Ten episodes, from 2017."},
+  {title:"Queer for Fear: The History of Queer Horror", meta:"Shudder · Miniseries · 2022", blurb:"A four-part history of queer horror, from the gothic novel to the films that kept that history in plain sight."},
+  {title:"The 101 Scariest Horror Movie Moments of All Time", meta:"Shudder · Miniseries · 2022", blurb:"A clip-driven survey of the moments audiences still cannot shake, argued by people who make and study the genre."}
+];
+const dlg = document.getElementById("dossier");
+function openStar(s){
+  document.getElementById("d-name").textContent = s.name;
+  document.getElementById("d-origin").textContent = s.origin;
+  document.getElementById("d-body").textContent = s.body;
+  const img = document.getElementById("d-img");
+  img.src = s.image;
+  img.alt = s.name;
+  if (!dlg.open) dlg.showModal();
+}
+document.getElementById("close").onclick = () => dlg.close();
+dlg.addEventListener("click", e => { if (e.target === dlg) dlg.close(); });
+document.getElementById("wall").innerHTML = stars.map((s,i)=>`<button class="frame" data-i="${i}"><span class="mat"><img src="${s.image}" alt="${s.name}"></span><small>${String(i+1).padStart(2,"0")} ${s.name}</small></button>`).join("");
+document.getElementById("star-list").innerHTML = stars.map((s,i)=>`<button class="star" data-i="${i}"><img src="${s.image}" alt=""><span><span class="idx">${String(i+1).padStart(2,"0")}</span><h3>${s.name}</h3><p class="muted">${s.origin}</p><p class="body">${s.body}</p></span></button>`).join("");
+document.getElementById("cmp").innerHTML = comps.map(c=>`<article class="cmp"><div class="cmp-head"><h3>${c.title}</h3><p class="meta">${c.meta}</p></div><p class="body">${c.blurb}</p></article>`).join("");
+document.body.addEventListener("click", e => {
+  const b = e.target.closest("[data-i]");
+  if (!b) return;
+  openStar(stars[Number(b.dataset.i)]);
+});
+document.getElementById("note-form").addEventListener("submit", e => {
+  e.preventDefault();
+  const note = {from: document.getElementById("from").value, msg: document.getElementById("msg").value, at: new Date().toISOString()};
+  const all = JSON.parse(localStorage.getItem("iswas-notes") || "[]");
+  all.push(note);
+  localStorage.setItem("iswas-notes", JSON.stringify(all));
+  document.getElementById("sent").hidden = false;
+  e.target.reset();
+});
+const q = new URLSearchParams(location.search);
+if (q.get("open")) openStar(stars[Number(q.get("open")) || 0]);
+</script>
+</body>
+</html>
